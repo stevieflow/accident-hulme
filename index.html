@@ -1,19 +1,19 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html><head><title>Road Accidents Data</title>
+<html><head><title>Hulme Road Accidents Map</title>
 
-<!--<link href="hulmeaccidents.js" type="application/json" rel="exhibit/data" />
+<!--<link href="hulmeaccidents.js" type="application/json" rel="exhibit/data" />-->
 <link rel="exhibit/data" 
        type="application/jsonp"
-       href="https://spreadsheets.google.com/feeds/list/0AqXcKmXbCG-OdFdyRnR5RU5vekd6WS0xR3gta1AzR0E/od6/public/basic?alt=json-in-script"
+       href="https://spreadsheets.google.com/feeds/list/0AqXcKmXbCG-OdHRjRXpUSUZHR1pteDJaUE9aZGtycmc/od6/public/basic?alt=json-in-script"
        ex:converter="googleSpreadsheets" />
        
 <link href="hulme.js" type="application/json" rel="exhibit/data" />
 
-<script src="http://static.simile.mit.edu/exhibit/api-2.0/exhibit-api.js" type="text/javascript"></script>
+<!--<script src="http://static.simile.mit.edu/exhibit/api-2.0/exhibit-api.js" type="text/javascript"></script>-->
  <script src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js"></script>
-<script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/map/map-extension.js?gmapkey=ABQIAAAAGRIeKZNu5kh1strSWdti9xS82LNPse490MW2_WaSyCtsyVjGvBTBJoLX57lUgTNMQF_EPBUBeNGGLg"></script>
-<script src="http://trunk.simile-widgets.org/exhibit/api/extensions/map/map-extension.js"></script>-->
+<!--<script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/map/map-extension.js?gmapkey=ABQIAAAAGRIeKZNu5kh1strSWdti9xS82LNPse490MW2_WaSyCtsyVjGvBTBJoLX57lUgTNMQF_EPBUBeNGGLg"></script>-->
+<script src="http://trunk.simile-widgets.org/exhibit/api/extensions/map/map-extension.js"></script>
 
 <script type="text/javascript">
 
@@ -28,9 +28,14 @@
   })();
 
 </script>
-<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="http://www.roadaccidentdata.org.uk/styles.css" type="text/css">
+
+
+
+
 </head>
 <body>
+
 <table width="100%">
 	<tr>
 		<tr>
@@ -48,13 +53,12 @@
 </tr>
 	</tr>
 </table>
-
 <table id="frame">
 <tbody>
 <tr>
 <td colspan="3" id="content">
-	<h1>Road Accidents Data</h1>
-	Using data published by DataGM. | Adding time and geography data | Creating maps and simple visualisations. <br/>
+	<h1>Road Accidents in Hulme, Manchester 2005-2010</h1>
+	Use the menus to filter the data.  | Click pins on the map to view incident details | To restart your search, click on "Reset all Filters" above map. <br/>
 </td>
 </tr>
 <tr>
@@ -62,46 +66,105 @@
 <td id="sidebar">
 
 <div>
-	<h2>New</h2>
-	</div>
-	<a href="/hulme">Map of accidents in Hulme - 2005-2010<br>
-	<img src="images/hulmemap-icon.png"></a>
-	<br/>
-	<br />
-	<a href="/heatmap">Heat Map of all accidents in GM - 2005-2012<br>
-	<img src="images/heatmap-icon.png"></a>
-	</div>
+	<h2>When....</h2>
+	</div><br/>
+
+<!-- <div ex:role="facet" ex:facetclass="TextSearch"ex:facetLabel="Search"></div>
+<br />-->
+
+<div ex:role="facet" ex:expression=".Year"ex:facetLabel="Year" ex:showMissing="false" ex:height="128px"></div>
+<div ex:role="facet" ex:expression=".Month"ex:facetLabel="Month" ex:showMissing="false" ex:fixedOrder="January;February;March;April;May;June;July;August;September;October;November;December" ex:height="150px"></div>
+<div ex:role="facet" ex:expression=".Day_of_Week"ex:facetLabel="Day of Week" ex:showMissing="false" ex:fixedOrder="Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday" ex:height="150px"></div>
+<div ex:role="facet" ex:expression=".Time_Period"ex:facetLabel="Time Period" ex:showMissing="false" ex:fixedOrder="Midnight-6am;6am-10am;10am-3pm;3pm-6pm;6pm-Midnight" ex:height="115px"></div>
 
 </td>
 
 
 <td id="content">
-    	<div>
-    	<h2>Updates: 21st March 2012</h2>
-    	<h2>Hulme Map</h2>
-    	Using Exhibit, I've created a map of road accidents in Hulme, Manchester.  <a href="/hulme">Filter the map by time, location and circumstances of the accident.</a>
-    	<br>
-    	<h2>Data</h2>
-    	Original data sets - <a href="http://www.datagm.org.uk/tag/accidents">DataGM</a><br>
-    	Hulme datasets with additional administrative geography (using UK Postcodes): <a href="https://docs.google.com/spreadsheet/pub?key=0AqXcKmXbCG-OdHRjRXpUSUZHR1pteDJaUE9aZGtycmc&single=true&gid=0&output=html">Google Doc</a><br>
-    	Datasets for all Greater Manchester local authority areas - with additional geography: <a href="https://www.google.com/fusiontables/DataSource?snapid=S431947ljff">Google Fusion tables</a> | <a href="https://spreadsheets.google.com/feeds/list/0AqXcKmXbCG-OdHRjRXpUSUZHR1pteDJaUE9aZGtycmc/od6/public/basic?alt=json-in-script">JSON</a> | <a href="data/DfTRoadSafety_Accidents_2005_2010-HULME.csv">CSV (Spreadsheet download 151kb)</a>
-    	Download the complete Google Refine project - create a new project to work on - <a href="DfTRoadSafety_Accidents_2005_2010-ALL-csv.google-refine.tar.gz">zipped file - 4.1MB</a>
-    	<h2>Get Involved</h2>
-    	Please build your own visualisations of this data<br>
-    	<a href="http://opendatamanchester.org.uk/">Join Open Data Manchester to discuss</a>
-    	
-    	</div>
-	</div><br/></div>
-    
+    <div ex:role="view" 
+    ex:viewClass="Map" 
+	ex:latlng=".LatLong"
+	ex:colorKey=".Accident_Severity"
+	ex:center="53.46686,-2.246339"
+	ex:zoom="15"
+	ex:maxautozoom="9"
+	ex:bubbleWidth="300"
+	ex:bubbleHeight="600"
+	ex:mapHeight="760"
+	ex:shapeheight="29" 
+	ex:shapewidth="25" 
+	ex:pin="true"
+	ex:densityfactor="2" 
+	ex:borderWidth="4"
+	ex:opacity="0.4"
+	ex:borderOpacity="1"
+	ex:overviewControl="true"
+	ex:polygon=".polygon"
+	ex:latlngOrder="lnglat"
+	<!--ex:colorCoder="ward-colors"-->
+	>
+</div>
+<!--
+<div ex:role="coder" ex:coderClass="Color" id="ward-colors">
+		<span ex:color="#660033">Hulme</span>
+	</div>-->
+
+<!--<div ex:role="facet" ex:facetclass="Cloud" ex:showMissing="false"ex:expression=".Day_of_Week"></div>-->
 
 
+
+					
+	<div class="map-lens" ex:role="lens" style="display: none" ex:onshow="prepareLens(this);">
+		<table cellpadding="10" width="100%">
+			<tr>
+				<!--<td width="1"><div ex:if-exists=".image"><img ex:src-content=".image" width="260" height="250" /></div></td>-->
+				<td>
+					<!-- <SPAN class=exhibit-popup-title ex:content=".label"></SPAN><br />-->
+					<div><font size="3">This was a <b><span ex:content=".Accident_Severity"></span></b> accident.</font></div>
+					<br>
+					<div>There were <b><span ex:content=".Number_of_Casualties"></span> casualities</b> and <b><span ex:content=".Number_of_Vehicles"></span> vehicles</b> involved.</span></div>
+					<br>
+					<div>It took place at <b><span ex:content=".Time"></span></b> on <b><span ex:content=".Day"></span> <span ex:content=".Month"></span> <span ex:content=".Year"></span></b>, which was a <b><span ex:content=".Day_of_Week"></span></b></div>
+					<br>								
+					<div>Light conditions: <b><span ex:content=".Light_Conditions"></span></b> </div>
+					<div>Weather conditions: <b><span ex:content=".Weather_Conditions"></span></b></div>
+					<div>Road surface conditions: <b><span ex:content=".Road_Surface_Conditions"></span></b></div>
+					<div>Road type: <b><span ex:content=".Road_Type"></span></b></div>
+					<div>Junction detail: <b><span ex:content=".Junction_Detail"></span></b></div>
+					<div>Speed limit: <b><span ex:content=".Speed_limit"></span></b></div>
+					<div>Special Condtions at site: <b><span ex:content=".Special_Conditions_at_Site"></span></b></div>
+					<div>Did a police officer attend the scene: <b><span ex:content=".Did_Police_Officer_Attend_Scene_of_Accident"></span></b></div>
+					
+					
+					<br>
+					<div>Precise co-ordinates: <span ex:content=".LatLong"></span> - nearest postcode: <b><span ex:content=".NearestPostcode"></span></b></div>
+					<br>
+					<div>Record ID: </b> <span ex:content=".label"></span></div>
+					<br />
+																		
+				</td>
+			</tr>
+		</table>
+	</div>
 </td>
 
 <td id="sidebar">
 
 <div>
-	<h2></h2>
+	<h2>What...</h2>
 	</div><br/>
+
+<!-- <div ex:role="facet" ex:facetclass="TextSearch"ex:facetLabel="Search"></div>
+<br />-->
+
+<div ex:role="facet" ex:expression=".Accident_Severity" ex:facetLabel="Accident Severity"ex:showMissing="false" ex:fixedOrder="Slight;Serious;Fatal" ex:height="65px"></div>
+<div ex:role="facet" ex:expression=".Number_of_Vehicles" ex:facetLabel="Number of Vehicles" ex:showMissing="false" ex:height="85px"></div>
+<div ex:role="facet" ex:expression=".Number_of_Casualties" ex:facetLabel="Number of Casualties" ex:showMissing="false" ex:height="128px"></div>
+<div ex:role="facet" ex:expression=".Road_Type" ex:facetLabel="Road Type" ex:showMissing="false" ex:height="110px"></div>
+<div ex:role="facet" ex:expression=".Speed_limit" ex:facetLabel="Speed limit" ex:showMissing="false" ex:height="85px"></div>
+<div ex:role="facet" ex:expression=".Weather_Conditions" ex:facetLabel="Weather Conditions" ex:showMissing="false" ex:height="150px"></div>
+<div ex:role="facet" ex:expression=".Road_Surface_Conditions" ex:facetLabel="Road Surface Conditions" ex:showMissing="false" ex:height="85px"></div>
+<div ex:role="facet" ex:facetclass="Cloud" ex:showMissing="false" ex:expression=".wardname"></div>
 
 
 
@@ -116,7 +179,7 @@
 		<div>Built by <a href="http://stevieflow.net/">@stevieflow</a> using <a href="http://simile-widgets.org/wiki/Exhibit">Exhibit</a>, with help from <a href="http://caprenter.me.uk">@caprenter</a>.</div>  
 		<div>Idea supported by <a href="http://opendatamanchester.org.uk/">Open Data Manchester</a>.</div>  
 		<div>Original data sourced from <a href="http://www.datagm.org.uk/">DataGM</a>.  See <a href="http://www.stats19.org.uk/html/accident_forms.html">Stats19</a> for explanation of codes and terms.</div>
-				</td>
+		</td>
 	</tr>
 </table>
 </body></html>
