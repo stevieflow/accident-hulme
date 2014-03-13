@@ -1,0 +1,249 @@
+﻿body {
+    margin:         0px;
+    padding:        0px;
+    font-family:    "verdana", "arial", sans-serif;
+    color:          #222;
+    background-color: #fff;
+    font-size:      10pt;
+    quotes:         "\201C" "\201E" "\2018" "\2019";
+
+}
+table {
+    font-size: 100%;
+	}
+td {
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    background-color: #acf;
+    border-bottom: 1px solid #cef; }
+td,th {
+    padding: 4px 5px; }
+
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+li
+{
+float:right;
+}
+
+#toplink
+{
+display:block;
+width:100px;
+color:#FFFFFF;
+background-color:#F0F0F0;
+text-align:center;
+padding:1px;
+text-decoration:none;
+text-transform:uppercase;
+float:right;
+}
+a:hover,a:active
+{
+background-color:#EAFF00;
+}
+
+
+#frame {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+#small_frame {
+    width: 930px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+#frame tr {
+    vertical-align: top;
+}
+
+#content {
+   width: 70%;
+   padding: 2em;
+    background-color: #DDE3EB;
+}
+
+#small_content {
+    width: 690px;
+    padding: 2em;
+    background-color: #DDE3EB;
+}
+
+#topnav h3 {
+    color: #1E3E63;
+    text-align:right
+}
+
+#topnav {
+   width: 100%;
+   background-color: #DDE3EB;
+   float:right;
+}
+
+#content h1 {
+    color: #1E3E63;
+    border-bottom: 1px solid #1E3E63;
+}
+
+#sidebar {
+    width: 15%;
+    white-space: nowrap;
+    background-color: #c3cbd8;
+    background-image: url(images/background.jpg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-left: 1px solid #ccc;
+    padding: 1em;
+}
+#sidebarTC {
+    width: 340px;
+    white-space: nowrap;
+    background-color: #fff;
+  /*  background-image: url(images/background.jpg);*/
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-left: 1px solid #ccc;
+    padding: 1em;
+}
+#small_sidebar {
+    width: 240px;
+    white-space: nowrap;
+    background-color: #fff;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-left: 1px solid #ccc;
+    padding: 1em;
+
+}
+
+#view-panel {
+    margin-top: 3em;
+}
+
+#view-panel table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+#view-panel h1 {
+    border: none;
+    font-size: 120%;
+}
+
+#view-panel h1 {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+#view-panel h2 {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0.5em;
+}
+
+.item {
+    border: 1px solid #aaa;
+    padding: 0.3em;
+}
+
+div.thumbnail {
+    border:     1px solid #aaa;
+    padding:    1em;
+    margin:     1em;
+    width:      100px;
+    height:     130px;
+    text-align: center;
+}
+div.map-lens {
+ border: 1px solid #aaa;
+    padding: 0.3em;
+ 
+    width:      550px;
+    height:     300px;
+  /*  text-align: center;*/
+	overflow: auto;
+
+}
+.exhibit-popup-title {
+	COLOR: #1E3E63;
+	FONT-WEIGHT: bold; FONT-SIZE: 130%
+}
+div .popup-title {
+COLOR: #1E3E63;
+	FONT-WEIGHT: bold; FONT-SIZE: 130%
+}
+div.thumbnail div {
+    height:     100px;
+    overflow:   hidden;
+}
+
+div.exhibit-facet-body {
+    background-color: #E3E6EC;
+    border: 1px solid #B8B8BB;
+}
+
+div.exhibit-facet-header {
+	color: #1E3E63; 
+  
+  /*  background-color: white;*/
+	background-color: #c3cbd8;
+}
+div.exhibit-facet-header2 {
+    color: #1E3E63; 
+  
+   background-color: white;
+  
+  
+}
+
+
+ div.thumbnail-container {
+            width:      100px;
+            height:     100px;
+        }
+        .map-popup img {
+            border:     1px solid #ccc;
+        }
+
+.exhibit-color-legend  {
+display:none;
+} 
+		
+		
+		
+.search_text
+{
+color:#1E3E63;
+font-weight:bold;
+}
+blockquote {
+	BORDER-RIGHT: #cdc9c9 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #cdc9c9 1px solid; PADDING-LEFT: 15px; BACKGROUND: #E3E6EC; PADDING-BOTTOM: 5px; MARGIN: 3px 5px; BORDER-LEFT: #cdc9c9 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #cdc9c9 1px solid;margin-bottom: 15px
+}
+span.right {
+position: absolute;
+right: 20;
+}
+
+
+
